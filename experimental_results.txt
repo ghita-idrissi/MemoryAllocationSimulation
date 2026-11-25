@@ -1,0 +1,1522 @@
+/Users/ghitaazami/Downloads/MemoryAllocationSimulation/.venv/bin/python /Users/ghitaazami/Downloads/MemoryAllocationSimulation/main.py
+Small Workload: [2, 3, 5, 4, 2, 6]
+Large Workload: [20, 25, 30, 15, 25]
+Mixed Workload: [5, 20, 3, 25, 10, 2, 30]
+
+========== ALLOCATION-ONLY EXPERIMENTS ==========
+
+===== THRESHOLD: 0 MB =====
+
+ First Fit - small
+
+----------------------------
+Algorithm: First Fit
+Workload: small
+Threshold: 0 MB
+----------------------------
+First Fit: Allocated 2 MB
+First Fit: Allocated 3 MB
+First Fit: Allocated 5 MB
+First Fit: Allocated 4 MB
+First Fit: Allocated 2 MB
+First Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ First Fit - large
+
+----------------------------
+Algorithm: First Fit
+Workload: large
+Threshold: 0 MB
+----------------------------
+First Fit: Allocated 20 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 30 MB
+First Fit: Allocated 15 MB
+First Fit: Allocation failed for 25 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 90 MB
+Memory Utilization: 90.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+
+ First Fit - mixed
+
+----------------------------
+Algorithm: First Fit
+Workload: mixed
+Threshold: 0 MB
+----------------------------
+First Fit: Allocated 5 MB
+First Fit: Allocated 20 MB
+First Fit: Allocated 3 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 10 MB
+First Fit: Allocated 2 MB
+First Fit: Allocated 30 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 95 MB
+Memory Utilization: 95.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': None, 'size': 5, 'status': 'Free'}]
+
+ Best Fit - small
+
+----------------------------
+Algorithm: Best Fit
+Workload: small
+Threshold: 0 MB
+----------------------------
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 3 MB
+Best Fit: Allocated 5 MB
+Best Fit: Allocated 4 MB
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ Best Fit - large
+
+----------------------------
+Algorithm: Best Fit
+Workload: large
+Threshold: 0 MB
+----------------------------
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 30 MB
+Best Fit: Allocated 15 MB
+Best Fit: Allocation failed for 25 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 90 MB
+Memory Utilization: 90.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+
+ Best Fit - mixed
+
+----------------------------
+Algorithm: Best Fit
+Workload: mixed
+Threshold: 0 MB
+----------------------------
+Best Fit: Allocated 5 MB
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 3 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 10 MB
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 30 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 95 MB
+Memory Utilization: 95.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': None, 'size': 5, 'status': 'Free'}]
+
+ Worst Fit - small
+
+----------------------------
+Algorithm: Worst Fit
+Workload: small
+Threshold: 0 MB
+----------------------------
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 3 MB
+Worst Fit: Allocated 5 MB
+Worst Fit: Allocated 4 MB
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ Worst Fit - large
+
+----------------------------
+Algorithm: Worst Fit
+Workload: large
+Threshold: 0 MB
+----------------------------
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 30 MB
+Worst Fit: Allocated 15 MB
+Worst Fit: Allocation failed for 25 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 90 MB
+Memory Utilization: 90.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+
+ Worst Fit - mixed
+
+----------------------------
+Algorithm: Worst Fit
+Workload: mixed
+Threshold: 0 MB
+----------------------------
+Worst Fit: Allocated 5 MB
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 3 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 10 MB
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 30 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 95 MB
+Memory Utilization: 95.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': None, 'size': 5, 'status': 'Free'}]
+
+===== THRESHOLD: 2 MB =====
+
+ First Fit - small
+
+----------------------------
+Algorithm: First Fit
+Workload: small
+Threshold: 2 MB
+----------------------------
+First Fit: Allocated 2 MB
+First Fit: Allocated 3 MB
+First Fit: Allocated 5 MB
+First Fit: Allocated 4 MB
+First Fit: Allocated 2 MB
+First Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ First Fit - large
+
+----------------------------
+Algorithm: First Fit
+Workload: large
+Threshold: 2 MB
+----------------------------
+First Fit: Allocated 20 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 30 MB
+First Fit: Allocated 15 MB
+First Fit: Allocation failed for 25 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 90 MB
+Memory Utilization: 90.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+
+ First Fit - mixed
+
+----------------------------
+Algorithm: First Fit
+Workload: mixed
+Threshold: 2 MB
+----------------------------
+First Fit: Allocated 5 MB
+First Fit: Allocated 20 MB
+First Fit: Allocated 3 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 10 MB
+First Fit: Allocated 2 MB
+First Fit: Allocated 30 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 95 MB
+Memory Utilization: 95.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': None, 'size': 5, 'status': 'Free'}]
+
+ Best Fit - small
+
+----------------------------
+Algorithm: Best Fit
+Workload: small
+Threshold: 2 MB
+----------------------------
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 3 MB
+Best Fit: Allocated 5 MB
+Best Fit: Allocated 4 MB
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ Best Fit - large
+
+----------------------------
+Algorithm: Best Fit
+Workload: large
+Threshold: 2 MB
+----------------------------
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 30 MB
+Best Fit: Allocated 15 MB
+Best Fit: Allocation failed for 25 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 90 MB
+Memory Utilization: 90.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+
+ Best Fit - mixed
+
+----------------------------
+Algorithm: Best Fit
+Workload: mixed
+Threshold: 2 MB
+----------------------------
+Best Fit: Allocated 5 MB
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 3 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 10 MB
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 30 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 95 MB
+Memory Utilization: 95.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': None, 'size': 5, 'status': 'Free'}]
+
+ Worst Fit - small
+
+----------------------------
+Algorithm: Worst Fit
+Workload: small
+Threshold: 2 MB
+----------------------------
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 3 MB
+Worst Fit: Allocated 5 MB
+Worst Fit: Allocated 4 MB
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ Worst Fit - large
+
+----------------------------
+Algorithm: Worst Fit
+Workload: large
+Threshold: 2 MB
+----------------------------
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 30 MB
+Worst Fit: Allocated 15 MB
+Worst Fit: Allocation failed for 25 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 90 MB
+Memory Utilization: 90.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+
+ Worst Fit - mixed
+
+----------------------------
+Algorithm: Worst Fit
+Workload: mixed
+Threshold: 2 MB
+----------------------------
+Worst Fit: Allocated 5 MB
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 3 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 10 MB
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 30 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 95 MB
+Memory Utilization: 95.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': None, 'size': 5, 'status': 'Free'}]
+
+===== THRESHOLD: 5 MB =====
+
+ First Fit - small
+
+----------------------------
+Algorithm: First Fit
+Workload: small
+Threshold: 5 MB
+----------------------------
+First Fit: Allocated 2 MB
+First Fit: Allocated 3 MB
+First Fit: Allocated 5 MB
+First Fit: Allocated 4 MB
+First Fit: Allocated 2 MB
+First Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ First Fit - large
+
+----------------------------
+Algorithm: First Fit
+Workload: large
+Threshold: 5 MB
+----------------------------
+First Fit: Allocated 20 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 30 MB
+First Fit: Allocated 15 MB
+First Fit: Allocation failed for 25 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 90 MB
+Memory Utilization: 90.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+
+ First Fit - mixed
+
+----------------------------
+Algorithm: First Fit
+Workload: mixed
+Threshold: 5 MB
+----------------------------
+First Fit: Allocated 5 MB
+First Fit: Allocated 20 MB
+First Fit: Allocated 3 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 10 MB
+First Fit: Allocated 2 MB
+First Fit: Allocated 35 MB
+External Fragmentation: N/A (No free memory)
+Internal Fragmentation: 5 MB
+Allocated Memory: 100 MB
+Memory Utilization: 100.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 35, 'requested_size': 30, 'status': 'Allocated'}]
+
+ Best Fit - small
+
+----------------------------
+Algorithm: Best Fit
+Workload: small
+Threshold: 5 MB
+----------------------------
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 3 MB
+Best Fit: Allocated 5 MB
+Best Fit: Allocated 4 MB
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ Best Fit - large
+
+----------------------------
+Algorithm: Best Fit
+Workload: large
+Threshold: 5 MB
+----------------------------
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 30 MB
+Best Fit: Allocated 15 MB
+Best Fit: Allocation failed for 25 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 90 MB
+Memory Utilization: 90.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+
+ Best Fit - mixed
+
+----------------------------
+Algorithm: Best Fit
+Workload: mixed
+Threshold: 5 MB
+----------------------------
+Best Fit: Allocated 5 MB
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 3 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 10 MB
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 35 MB
+External Fragmentation: N/A (No free memory)
+Internal Fragmentation: 5 MB
+Allocated Memory: 100 MB
+Memory Utilization: 100.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 35, 'requested_size': 30, 'status': 'Allocated'}]
+
+ Worst Fit - small
+
+----------------------------
+Algorithm: Worst Fit
+Workload: small
+Threshold: 5 MB
+----------------------------
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 3 MB
+Worst Fit: Allocated 5 MB
+Worst Fit: Allocated 4 MB
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ Worst Fit - large
+
+----------------------------
+Algorithm: Worst Fit
+Workload: large
+Threshold: 5 MB
+----------------------------
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 30 MB
+Worst Fit: Allocated 15 MB
+Worst Fit: Allocation failed for 25 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 90 MB
+Memory Utilization: 90.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+
+ Worst Fit - mixed
+
+----------------------------
+Algorithm: Worst Fit
+Workload: mixed
+Threshold: 5 MB
+----------------------------
+Worst Fit: Allocated 5 MB
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 3 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 10 MB
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 35 MB
+External Fragmentation: N/A (No free memory)
+Internal Fragmentation: 5 MB
+Allocated Memory: 100 MB
+Memory Utilization: 100.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 35, 'requested_size': 30, 'status': 'Allocated'}]
+
+===== THRESHOLD: 10 MB =====
+
+ First Fit - small
+
+----------------------------
+Algorithm: First Fit
+Workload: small
+Threshold: 10 MB
+----------------------------
+First Fit: Allocated 2 MB
+First Fit: Allocated 3 MB
+First Fit: Allocated 5 MB
+First Fit: Allocated 4 MB
+First Fit: Allocated 2 MB
+First Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ First Fit - large
+
+----------------------------
+Algorithm: First Fit
+Workload: large
+Threshold: 10 MB
+----------------------------
+First Fit: Allocated 20 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 30 MB
+First Fit: Allocated 25 MB
+First Fit: Allocation failed for 25 MB
+External Fragmentation: N/A (No free memory)
+Internal Fragmentation: 10 MB
+Allocated Memory: 100 MB
+Memory Utilization: 100.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 15, 'status': 'Allocated'}]
+
+ First Fit - mixed
+
+----------------------------
+Algorithm: First Fit
+Workload: mixed
+Threshold: 10 MB
+----------------------------
+First Fit: Allocated 5 MB
+First Fit: Allocated 20 MB
+First Fit: Allocated 3 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 10 MB
+First Fit: Allocated 2 MB
+First Fit: Allocated 35 MB
+External Fragmentation: N/A (No free memory)
+Internal Fragmentation: 5 MB
+Allocated Memory: 100 MB
+Memory Utilization: 100.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 35, 'requested_size': 30, 'status': 'Allocated'}]
+
+ Best Fit - small
+
+----------------------------
+Algorithm: Best Fit
+Workload: small
+Threshold: 10 MB
+----------------------------
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 3 MB
+Best Fit: Allocated 5 MB
+Best Fit: Allocated 4 MB
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ Best Fit - large
+
+----------------------------
+Algorithm: Best Fit
+Workload: large
+Threshold: 10 MB
+----------------------------
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 30 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocation failed for 25 MB
+External Fragmentation: N/A (No free memory)
+Internal Fragmentation: 10 MB
+Allocated Memory: 100 MB
+Memory Utilization: 100.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 15, 'status': 'Allocated'}]
+
+ Best Fit - mixed
+
+----------------------------
+Algorithm: Best Fit
+Workload: mixed
+Threshold: 10 MB
+----------------------------
+Best Fit: Allocated 5 MB
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 3 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 10 MB
+Best Fit: Allocated 2 MB
+Best Fit: Allocated 35 MB
+External Fragmentation: N/A (No free memory)
+Internal Fragmentation: 5 MB
+Allocated Memory: 100 MB
+Memory Utilization: 100.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 35, 'requested_size': 30, 'status': 'Allocated'}]
+
+ Worst Fit - small
+
+----------------------------
+Algorithm: Worst Fit
+Workload: small
+Threshold: 10 MB
+----------------------------
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 3 MB
+Worst Fit: Allocated 5 MB
+Worst Fit: Allocated 4 MB
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 6 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 22 MB
+Memory Utilization: 22.0 %
+Successful allocations: 6
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 2, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 3, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 4, 'size': 4, 'requested_size': 4, 'status': 'Allocated'}, {'id': 5, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 6, 'size': 6, 'requested_size': 6, 'status': 'Allocated'}, {'id': None, 'size': 78, 'status': 'Free'}]
+
+ Worst Fit - large
+
+----------------------------
+Algorithm: Worst Fit
+Workload: large
+Threshold: 10 MB
+----------------------------
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 30 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocation failed for 25 MB
+External Fragmentation: N/A (No free memory)
+Internal Fragmentation: 10 MB
+Allocated Memory: 100 MB
+Memory Utilization: 100.0 %
+Successful allocations: 4
+Failed allocations: 1
+Final Memory Pool:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 3, 'size': 30, 'requested_size': 30, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 15, 'status': 'Allocated'}]
+
+ Worst Fit - mixed
+
+----------------------------
+Algorithm: Worst Fit
+Workload: mixed
+Threshold: 10 MB
+----------------------------
+Worst Fit: Allocated 5 MB
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 3 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 10 MB
+Worst Fit: Allocated 2 MB
+Worst Fit: Allocated 35 MB
+External Fragmentation: N/A (No free memory)
+Internal Fragmentation: 5 MB
+Allocated Memory: 100 MB
+Memory Utilization: 100.0 %
+Successful allocations: 7
+Failed allocations: 0
+Final Memory Pool:
+[{'id': 1, 'size': 5, 'requested_size': 5, 'status': 'Allocated'}, {'id': 2, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 3, 'size': 3, 'requested_size': 3, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 2, 'requested_size': 2, 'status': 'Allocated'}, {'id': 7, 'size': 35, 'requested_size': 30, 'status': 'Allocated'}]
+
+===== STANDALONE DEALLOCATION TEST =====
+First Fit: Allocated 20 MB
+First Fit: Allocated 15 MB
+First Fit: Allocated 10 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 10 MB
+
+Before deallocation:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': 2, 'size': 15, 'requested_size': 15, 'status': 'Allocated'}, {'id': 3, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 4, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': None, 'size': 20, 'status': 'Free'}]
+Block 2 released successfully
+Block 4 released successfully
+
+After deallocation:
+[{'id': 1, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': None, 'size': 15, 'status': 'Free'}, {'id': 3, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': None, 'size': 25, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': None, 'size': 20, 'status': 'Free'}]
+External Fragmentation: 58.33 %
+
+========== DYNAMIC EXPERIMENTS: SCENARIO 1 ==========
+
+================================
+Scenario 1 - First Fit
+Threshold: 0 MB
+================================
+First Fit: Allocated 20 MB
+First Fit: Allocated 15 MB
+First Fit: Allocated 10 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+First Fit: Allocated 18 MB
+First Fit: Allocated 12 MB
+Block 1 released successfully
+Block 3 released successfully
+Two free blocks merged successfully
+First Fit: Allocation failed for 22 MB
+
+Final Memory: [{'id': None, 'size': 20, 'status': 'Free'}, {'id': 7, 'size': 12, 'requested_size': 12, 'status': 'Allocated'}, {'id': None, 'size': 13, 'status': 'Free'}, {'id': 6, 'size': 18, 'requested_size': 18, 'status': 'Allocated'}, {'id': None, 'size': 7, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': None, 'size': 20, 'status': 'Free'}]
+Total Free Memory: 60 MB
+Largest Free Block: 20 MB
+External Fragmentation: 66.67 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 40 MB
+Memory Utilization: 40.0 %
+Successful allocations: 7
+Failed allocations: 1
+
+================================
+Scenario 1 - Best Fit
+Threshold: 0 MB
+================================
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 15 MB
+Best Fit: Allocated 10 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+Best Fit: Allocated 18 MB
+Best Fit: Allocated 12 MB
+Block 1 released successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Two free blocks merged successfully
+Best Fit: Allocated 22 MB
+
+Final Memory: [{'id': None, 'size': 20, 'status': 'Free'}, {'id': 7, 'size': 12, 'requested_size': 12, 'status': 'Allocated'}, {'id': 8, 'size': 22, 'requested_size': 22, 'status': 'Allocated'}, {'id': None, 'size': 16, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 18, 'requested_size': 18, 'status': 'Allocated'}, {'id': None, 'size': 2, 'status': 'Free'}]
+Total Free Memory: 38 MB
+Largest Free Block: 20 MB
+External Fragmentation: 47.37 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 62 MB
+Memory Utilization: 62.0 %
+Successful allocations: 8
+Failed allocations: 0
+
+================================
+Scenario 1 - Worst Fit
+Threshold: 0 MB
+================================
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 15 MB
+Worst Fit: Allocated 10 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+Worst Fit: Allocated 18 MB
+Worst Fit: Allocated 12 MB
+Block 1 released successfully
+Two free blocks merged successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Worst Fit: Allocated 22 MB
+
+Final Memory: [{'id': 8, 'size': 22, 'requested_size': 22, 'status': 'Allocated'}, {'id': None, 'size': 23, 'status': 'Free'}, {'id': 6, 'size': 18, 'requested_size': 18, 'status': 'Allocated'}, {'id': None, 'size': 7, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 7, 'size': 12, 'requested_size': 12, 'status': 'Allocated'}, {'id': None, 'size': 8, 'status': 'Free'}]
+Total Free Memory: 38 MB
+Largest Free Block: 23 MB
+External Fragmentation: 39.47 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 62 MB
+Memory Utilization: 62.0 %
+Successful allocations: 8
+Failed allocations: 0
+
+================================
+Scenario 1 - First Fit
+Threshold: 2 MB
+================================
+First Fit: Allocated 20 MB
+First Fit: Allocated 15 MB
+First Fit: Allocated 10 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+First Fit: Allocated 18 MB
+First Fit: Allocated 12 MB
+Block 1 released successfully
+Block 3 released successfully
+Two free blocks merged successfully
+First Fit: Allocation failed for 22 MB
+
+Final Memory: [{'id': None, 'size': 20, 'status': 'Free'}, {'id': 7, 'size': 12, 'requested_size': 12, 'status': 'Allocated'}, {'id': None, 'size': 13, 'status': 'Free'}, {'id': 6, 'size': 18, 'requested_size': 18, 'status': 'Allocated'}, {'id': None, 'size': 7, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': None, 'size': 20, 'status': 'Free'}]
+Total Free Memory: 60 MB
+Largest Free Block: 20 MB
+External Fragmentation: 66.67 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 40 MB
+Memory Utilization: 40.0 %
+Successful allocations: 7
+Failed allocations: 1
+
+================================
+Scenario 1 - Best Fit
+Threshold: 2 MB
+================================
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 15 MB
+Best Fit: Allocated 10 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 12 MB
+Block 1 released successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Two free blocks merged successfully
+Best Fit: Allocated 22 MB
+
+Final Memory: [{'id': None, 'size': 20, 'status': 'Free'}, {'id': 7, 'size': 12, 'requested_size': 12, 'status': 'Allocated'}, {'id': 8, 'size': 22, 'requested_size': 22, 'status': 'Allocated'}, {'id': None, 'size': 16, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 20, 'requested_size': 18, 'status': 'Allocated'}]
+Total Free Memory: 36 MB
+Largest Free Block: 20 MB
+External Fragmentation: 44.44 %
+Internal Fragmentation: 2 MB
+Allocated Memory: 64 MB
+Memory Utilization: 64.0 %
+Successful allocations: 8
+Failed allocations: 0
+
+================================
+Scenario 1 - Worst Fit
+Threshold: 2 MB
+================================
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 15 MB
+Worst Fit: Allocated 10 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+Worst Fit: Allocated 18 MB
+Worst Fit: Allocated 12 MB
+Block 1 released successfully
+Two free blocks merged successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Worst Fit: Allocated 22 MB
+
+Final Memory: [{'id': 8, 'size': 22, 'requested_size': 22, 'status': 'Allocated'}, {'id': None, 'size': 23, 'status': 'Free'}, {'id': 6, 'size': 18, 'requested_size': 18, 'status': 'Allocated'}, {'id': None, 'size': 7, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 7, 'size': 12, 'requested_size': 12, 'status': 'Allocated'}, {'id': None, 'size': 8, 'status': 'Free'}]
+Total Free Memory: 38 MB
+Largest Free Block: 23 MB
+External Fragmentation: 39.47 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 62 MB
+Memory Utilization: 62.0 %
+Successful allocations: 8
+Failed allocations: 0
+
+================================
+Scenario 1 - First Fit
+Threshold: 5 MB
+================================
+First Fit: Allocated 20 MB
+First Fit: Allocated 15 MB
+First Fit: Allocated 10 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+First Fit: Allocated 18 MB
+First Fit: Allocated 15 MB
+Block 1 released successfully
+Block 3 released successfully
+First Fit: Allocation failed for 22 MB
+
+Final Memory: [{'id': None, 'size': 20, 'status': 'Free'}, {'id': 7, 'size': 15, 'requested_size': 12, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}, {'id': 6, 'size': 18, 'requested_size': 18, 'status': 'Allocated'}, {'id': None, 'size': 7, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': None, 'size': 20, 'status': 'Free'}]
+Total Free Memory: 57 MB
+Largest Free Block: 20 MB
+External Fragmentation: 64.91 %
+Internal Fragmentation: 3 MB
+Allocated Memory: 43 MB
+Memory Utilization: 43.0 %
+Successful allocations: 7
+Failed allocations: 1
+
+================================
+Scenario 1 - Best Fit
+Threshold: 5 MB
+================================
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 15 MB
+Best Fit: Allocated 10 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 15 MB
+Block 1 released successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Best Fit: Allocated 22 MB
+
+Final Memory: [{'id': None, 'size': 20, 'status': 'Free'}, {'id': 7, 'size': 15, 'requested_size': 12, 'status': 'Allocated'}, {'id': 8, 'size': 22, 'requested_size': 22, 'status': 'Allocated'}, {'id': None, 'size': 13, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 20, 'requested_size': 18, 'status': 'Allocated'}]
+Total Free Memory: 33 MB
+Largest Free Block: 20 MB
+External Fragmentation: 39.39 %
+Internal Fragmentation: 5 MB
+Allocated Memory: 67 MB
+Memory Utilization: 67.0 %
+Successful allocations: 8
+Failed allocations: 0
+
+================================
+Scenario 1 - Worst Fit
+Threshold: 5 MB
+================================
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 15 MB
+Worst Fit: Allocated 10 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+Worst Fit: Allocated 18 MB
+Worst Fit: Allocated 12 MB
+Block 1 released successfully
+Two free blocks merged successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Worst Fit: Allocated 22 MB
+
+Final Memory: [{'id': 8, 'size': 22, 'requested_size': 22, 'status': 'Allocated'}, {'id': None, 'size': 23, 'status': 'Free'}, {'id': 6, 'size': 18, 'requested_size': 18, 'status': 'Allocated'}, {'id': None, 'size': 7, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 7, 'size': 12, 'requested_size': 12, 'status': 'Allocated'}, {'id': None, 'size': 8, 'status': 'Free'}]
+Total Free Memory: 38 MB
+Largest Free Block: 23 MB
+External Fragmentation: 39.47 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 62 MB
+Memory Utilization: 62.0 %
+Successful allocations: 8
+Failed allocations: 0
+
+================================
+Scenario 1 - First Fit
+Threshold: 10 MB
+================================
+First Fit: Allocated 20 MB
+First Fit: Allocated 15 MB
+First Fit: Allocated 10 MB
+First Fit: Allocated 25 MB
+First Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+First Fit: Allocated 25 MB
+First Fit: Allocated 15 MB
+Block 1 released successfully
+Block 3 released successfully
+First Fit: Allocation failed for 22 MB
+
+Final Memory: [{'id': None, 'size': 20, 'status': 'Free'}, {'id': 7, 'size': 15, 'requested_size': 12, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}, {'id': 6, 'size': 25, 'requested_size': 18, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': None, 'size': 20, 'status': 'Free'}]
+Total Free Memory: 50 MB
+Largest Free Block: 20 MB
+External Fragmentation: 60.0 %
+Internal Fragmentation: 10 MB
+Allocated Memory: 50 MB
+Memory Utilization: 50.0 %
+Successful allocations: 7
+Failed allocations: 1
+
+================================
+Scenario 1 - Best Fit
+Threshold: 10 MB
+================================
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 15 MB
+Best Fit: Allocated 10 MB
+Best Fit: Allocated 25 MB
+Best Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+Best Fit: Allocated 20 MB
+Best Fit: Allocated 15 MB
+Block 1 released successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Best Fit: Allocated 22 MB
+
+Final Memory: [{'id': None, 'size': 20, 'status': 'Free'}, {'id': 7, 'size': 15, 'requested_size': 12, 'status': 'Allocated'}, {'id': 8, 'size': 22, 'requested_size': 22, 'status': 'Allocated'}, {'id': None, 'size': 13, 'status': 'Free'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 6, 'size': 20, 'requested_size': 18, 'status': 'Allocated'}]
+Total Free Memory: 33 MB
+Largest Free Block: 20 MB
+External Fragmentation: 39.39 %
+Internal Fragmentation: 5 MB
+Allocated Memory: 67 MB
+Memory Utilization: 67.0 %
+Successful allocations: 8
+Failed allocations: 0
+
+================================
+Scenario 1 - Worst Fit
+Threshold: 10 MB
+================================
+Worst Fit: Allocated 20 MB
+Worst Fit: Allocated 15 MB
+Worst Fit: Allocated 10 MB
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 10 MB
+Block 2 released successfully
+Block 4 released successfully
+Worst Fit: Allocated 25 MB
+Worst Fit: Allocated 20 MB
+Block 1 released successfully
+Two free blocks merged successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Worst Fit: Allocated 22 MB
+
+Final Memory: [{'id': 8, 'size': 22, 'requested_size': 22, 'status': 'Allocated'}, {'id': None, 'size': 23, 'status': 'Free'}, {'id': 6, 'size': 25, 'requested_size': 18, 'status': 'Allocated'}, {'id': 5, 'size': 10, 'requested_size': 10, 'status': 'Allocated'}, {'id': 7, 'size': 20, 'requested_size': 12, 'status': 'Allocated'}]
+Total Free Memory: 23 MB
+Largest Free Block: 23 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 15 MB
+Allocated Memory: 77 MB
+Memory Utilization: 77.0 %
+Successful allocations: 8
+Failed allocations: 0
+
+========== DYNAMIC EXPERIMENTS: SCENARIO 2 ==========
+
+================================
+Scenario 2 - First Fit
+Threshold: 0 MB
+================================
+First Fit: Allocated 12 MB
+First Fit: Allocated 18 MB
+First Fit: Allocated 8 MB
+First Fit: Allocated 22 MB
+First Fit: Allocated 14 MB
+First Fit: Allocated 16 MB
+Block 2 released successfully
+Block 4 released successfully
+First Fit: Allocated 17 MB
+First Fit: Allocated 20 MB
+Block 1 released successfully
+Block 3 released successfully
+Two free blocks merged successfully
+First Fit: Allocation failed for 25 MB
+
+Final Memory: [{'id': None, 'size': 12, 'status': 'Free'}, {'id': 7, 'size': 17, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 9, 'status': 'Free'}, {'id': 8, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': None, 'size': 2, 'status': 'Free'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 16, 'requested_size': 16, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+Total Free Memory: 33 MB
+Largest Free Block: 12 MB
+External Fragmentation: 63.64 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 67 MB
+Memory Utilization: 67.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - Best Fit
+Threshold: 0 MB
+================================
+Best Fit: Allocated 12 MB
+Best Fit: Allocated 18 MB
+Best Fit: Allocated 8 MB
+Best Fit: Allocated 22 MB
+Best Fit: Allocated 14 MB
+Best Fit: Allocated 16 MB
+Block 2 released successfully
+Block 4 released successfully
+Best Fit: Allocated 17 MB
+Best Fit: Allocated 20 MB
+Block 1 released successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Best Fit: Allocation failed for 25 MB
+
+Final Memory: [{'id': None, 'size': 12, 'status': 'Free'}, {'id': 7, 'size': 17, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 9, 'status': 'Free'}, {'id': 8, 'size': 20, 'requested_size': 20, 'status': 'Allocated'}, {'id': None, 'size': 2, 'status': 'Free'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 16, 'requested_size': 16, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+Total Free Memory: 33 MB
+Largest Free Block: 12 MB
+External Fragmentation: 63.64 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 67 MB
+Memory Utilization: 67.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - Worst Fit
+Threshold: 0 MB
+================================
+Worst Fit: Allocated 12 MB
+Worst Fit: Allocated 18 MB
+Worst Fit: Allocated 8 MB
+Worst Fit: Allocated 22 MB
+Worst Fit: Allocated 14 MB
+Worst Fit: Allocated 16 MB
+Block 2 released successfully
+Block 4 released successfully
+Worst Fit: Allocated 17 MB
+Worst Fit: Allocation failed for 20 MB
+Block 1 released successfully
+Two free blocks merged successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Worst Fit: Allocated 25 MB
+
+Final Memory: [{'id': 8, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': None, 'size': 13, 'status': 'Free'}, {'id': 7, 'size': 17, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 5, 'status': 'Free'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 16, 'requested_size': 16, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+Total Free Memory: 28 MB
+Largest Free Block: 13 MB
+External Fragmentation: 53.57 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 72 MB
+Memory Utilization: 72.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - First Fit
+Threshold: 2 MB
+================================
+First Fit: Allocated 12 MB
+First Fit: Allocated 18 MB
+First Fit: Allocated 8 MB
+First Fit: Allocated 22 MB
+First Fit: Allocated 14 MB
+First Fit: Allocated 16 MB
+Block 2 released successfully
+Block 4 released successfully
+First Fit: Allocated 18 MB
+First Fit: Allocated 22 MB
+Block 1 released successfully
+Block 3 released successfully
+First Fit: Allocation failed for 25 MB
+
+Final Memory: [{'id': None, 'size': 12, 'status': 'Free'}, {'id': 7, 'size': 18, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 8, 'status': 'Free'}, {'id': 8, 'size': 22, 'requested_size': 20, 'status': 'Allocated'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 16, 'requested_size': 16, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+Total Free Memory: 30 MB
+Largest Free Block: 12 MB
+External Fragmentation: 60.0 %
+Internal Fragmentation: 3 MB
+Allocated Memory: 70 MB
+Memory Utilization: 70.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - Best Fit
+Threshold: 2 MB
+================================
+Best Fit: Allocated 12 MB
+Best Fit: Allocated 18 MB
+Best Fit: Allocated 8 MB
+Best Fit: Allocated 22 MB
+Best Fit: Allocated 14 MB
+Best Fit: Allocated 16 MB
+Block 2 released successfully
+Block 4 released successfully
+Best Fit: Allocated 18 MB
+Best Fit: Allocated 22 MB
+Block 1 released successfully
+Block 3 released successfully
+Best Fit: Allocation failed for 25 MB
+
+Final Memory: [{'id': None, 'size': 12, 'status': 'Free'}, {'id': 7, 'size': 18, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 8, 'status': 'Free'}, {'id': 8, 'size': 22, 'requested_size': 20, 'status': 'Allocated'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 16, 'requested_size': 16, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+Total Free Memory: 30 MB
+Largest Free Block: 12 MB
+External Fragmentation: 60.0 %
+Internal Fragmentation: 3 MB
+Allocated Memory: 70 MB
+Memory Utilization: 70.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - Worst Fit
+Threshold: 2 MB
+================================
+Worst Fit: Allocated 12 MB
+Worst Fit: Allocated 18 MB
+Worst Fit: Allocated 8 MB
+Worst Fit: Allocated 22 MB
+Worst Fit: Allocated 14 MB
+Worst Fit: Allocated 16 MB
+Block 2 released successfully
+Block 4 released successfully
+Worst Fit: Allocated 17 MB
+Worst Fit: Allocation failed for 20 MB
+Block 1 released successfully
+Two free blocks merged successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Worst Fit: Allocated 25 MB
+
+Final Memory: [{'id': 8, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': None, 'size': 13, 'status': 'Free'}, {'id': 7, 'size': 17, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 5, 'status': 'Free'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 16, 'requested_size': 16, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+Total Free Memory: 28 MB
+Largest Free Block: 13 MB
+External Fragmentation: 53.57 %
+Internal Fragmentation: 0 MB
+Allocated Memory: 72 MB
+Memory Utilization: 72.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - First Fit
+Threshold: 5 MB
+================================
+First Fit: Allocated 12 MB
+First Fit: Allocated 18 MB
+First Fit: Allocated 8 MB
+First Fit: Allocated 22 MB
+First Fit: Allocated 14 MB
+First Fit: Allocated 16 MB
+Block 2 released successfully
+Block 4 released successfully
+First Fit: Allocated 18 MB
+First Fit: Allocated 22 MB
+Block 1 released successfully
+Block 3 released successfully
+First Fit: Allocation failed for 25 MB
+
+Final Memory: [{'id': None, 'size': 12, 'status': 'Free'}, {'id': 7, 'size': 18, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 8, 'status': 'Free'}, {'id': 8, 'size': 22, 'requested_size': 20, 'status': 'Allocated'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 16, 'requested_size': 16, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+Total Free Memory: 30 MB
+Largest Free Block: 12 MB
+External Fragmentation: 60.0 %
+Internal Fragmentation: 3 MB
+Allocated Memory: 70 MB
+Memory Utilization: 70.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - Best Fit
+Threshold: 5 MB
+================================
+Best Fit: Allocated 12 MB
+Best Fit: Allocated 18 MB
+Best Fit: Allocated 8 MB
+Best Fit: Allocated 22 MB
+Best Fit: Allocated 14 MB
+Best Fit: Allocated 16 MB
+Block 2 released successfully
+Block 4 released successfully
+Best Fit: Allocated 18 MB
+Best Fit: Allocated 22 MB
+Block 1 released successfully
+Block 3 released successfully
+Best Fit: Allocation failed for 25 MB
+
+Final Memory: [{'id': None, 'size': 12, 'status': 'Free'}, {'id': 7, 'size': 18, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 8, 'status': 'Free'}, {'id': 8, 'size': 22, 'requested_size': 20, 'status': 'Allocated'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 16, 'requested_size': 16, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+Total Free Memory: 30 MB
+Largest Free Block: 12 MB
+External Fragmentation: 60.0 %
+Internal Fragmentation: 3 MB
+Allocated Memory: 70 MB
+Memory Utilization: 70.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - Worst Fit
+Threshold: 5 MB
+================================
+Worst Fit: Allocated 12 MB
+Worst Fit: Allocated 18 MB
+Worst Fit: Allocated 8 MB
+Worst Fit: Allocated 22 MB
+Worst Fit: Allocated 14 MB
+Worst Fit: Allocated 16 MB
+Block 2 released successfully
+Block 4 released successfully
+Worst Fit: Allocated 22 MB
+Worst Fit: Allocation failed for 20 MB
+Block 1 released successfully
+Two free blocks merged successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Worst Fit: Allocated 25 MB
+
+Final Memory: [{'id': 8, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': None, 'size': 13, 'status': 'Free'}, {'id': 7, 'size': 22, 'requested_size': 17, 'status': 'Allocated'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 16, 'requested_size': 16, 'status': 'Allocated'}, {'id': None, 'size': 10, 'status': 'Free'}]
+Total Free Memory: 23 MB
+Largest Free Block: 13 MB
+External Fragmentation: 43.48 %
+Internal Fragmentation: 5 MB
+Allocated Memory: 77 MB
+Memory Utilization: 77.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - First Fit
+Threshold: 10 MB
+================================
+First Fit: Allocated 12 MB
+First Fit: Allocated 18 MB
+First Fit: Allocated 8 MB
+First Fit: Allocated 22 MB
+First Fit: Allocated 14 MB
+First Fit: Allocated 26 MB
+Block 2 released successfully
+Block 4 released successfully
+First Fit: Allocated 18 MB
+First Fit: Allocated 22 MB
+Block 1 released successfully
+Block 3 released successfully
+First Fit: Allocation failed for 25 MB
+
+Final Memory: [{'id': None, 'size': 12, 'status': 'Free'}, {'id': 7, 'size': 18, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 8, 'status': 'Free'}, {'id': 8, 'size': 22, 'requested_size': 20, 'status': 'Allocated'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 26, 'requested_size': 16, 'status': 'Allocated'}]
+Total Free Memory: 20 MB
+Largest Free Block: 12 MB
+External Fragmentation: 40.0 %
+Internal Fragmentation: 13 MB
+Allocated Memory: 80 MB
+Memory Utilization: 80.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - Best Fit
+Threshold: 10 MB
+================================
+Best Fit: Allocated 12 MB
+Best Fit: Allocated 18 MB
+Best Fit: Allocated 8 MB
+Best Fit: Allocated 22 MB
+Best Fit: Allocated 14 MB
+Best Fit: Allocated 26 MB
+Block 2 released successfully
+Block 4 released successfully
+Best Fit: Allocated 18 MB
+Best Fit: Allocated 22 MB
+Block 1 released successfully
+Block 3 released successfully
+Best Fit: Allocation failed for 25 MB
+
+Final Memory: [{'id': None, 'size': 12, 'status': 'Free'}, {'id': 7, 'size': 18, 'requested_size': 17, 'status': 'Allocated'}, {'id': None, 'size': 8, 'status': 'Free'}, {'id': 8, 'size': 22, 'requested_size': 20, 'status': 'Allocated'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 26, 'requested_size': 16, 'status': 'Allocated'}]
+Total Free Memory: 20 MB
+Largest Free Block: 12 MB
+External Fragmentation: 40.0 %
+Internal Fragmentation: 13 MB
+Allocated Memory: 80 MB
+Memory Utilization: 80.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+================================
+Scenario 2 - Worst Fit
+Threshold: 10 MB
+================================
+Worst Fit: Allocated 12 MB
+Worst Fit: Allocated 18 MB
+Worst Fit: Allocated 8 MB
+Worst Fit: Allocated 22 MB
+Worst Fit: Allocated 14 MB
+Worst Fit: Allocated 26 MB
+Block 2 released successfully
+Block 4 released successfully
+Worst Fit: Allocated 22 MB
+Worst Fit: Allocation failed for 20 MB
+Block 1 released successfully
+Two free blocks merged successfully
+Block 3 released successfully
+Two free blocks merged successfully
+Worst Fit: Allocated 25 MB
+
+Final Memory: [{'id': 8, 'size': 25, 'requested_size': 25, 'status': 'Allocated'}, {'id': None, 'size': 13, 'status': 'Free'}, {'id': 7, 'size': 22, 'requested_size': 17, 'status': 'Allocated'}, {'id': 5, 'size': 14, 'requested_size': 14, 'status': 'Allocated'}, {'id': 6, 'size': 26, 'requested_size': 16, 'status': 'Allocated'}]
+Total Free Memory: 13 MB
+Largest Free Block: 13 MB
+External Fragmentation: 0.0 %
+Internal Fragmentation: 15 MB
+Allocated Memory: 87 MB
+Memory Utilization: 87.0 %
+Successful allocations: 8
+Failed allocations: 1
+
+========== EXPERIMENT SUMMARY ==========
+Allocation-only experiments: 36
+Dynamic Scenario 1 experiments: 12
+Dynamic Scenario 2 experiments: 12
+Total dynamic experiments: 24
+
+All experiments completed.
+
+Process finished with exit code 0
